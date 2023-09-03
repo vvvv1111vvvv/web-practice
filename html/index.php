@@ -6,18 +6,25 @@
 </head>
 <body id="target">
     <header>
-        <h1><a href="http://localhost/html/">JavaScript</a></h1>
+        <h1><a href="http://localhost/html/index.php">JavaScript</a></h1>
     </header>
     <nav>
         <ol>
-        <li><a href="http://localhost/html/page_html.html">JavaScript란?</a></li>
-        <li><a href="http://localhost/html/page_vc.html">변수와 상수</a></li>
-        <li><a href="http://localhost/html/page_op.html">연산자</a></li>
+        <?php
+          echo file_get_contents("list.txt");
+          ?>
         </ol>
     </nav>
   <div id="control">
     <input type="button" value="white" id= "white_btn"/>
     <input type="button" value="black" id= "black_btn"/>
   <script src = "http://localhost/script.js"></script>
+  <article>
+    <?php
+    if (empty($_GET['id'])==false){
+      echo file_get_contents($_GET['id'].".txt");
+    }
+    ?>
+  </article>
 </body>
 </html>
