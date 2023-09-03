@@ -13,7 +13,7 @@
   </script>
   <h1>php</h1>
   <?php
-    $list= Array("one","two","three");
+    $list= array("one","two","three");
     echo $list[0];
     echo count($list);
   ?>
