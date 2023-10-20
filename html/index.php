@@ -18,7 +18,9 @@
   <div id="control">
     <input type="button" value="white" id= "white_btn"/>
     <input type="button" value="black" id= "black_btn"/>
+
   <script src = "http://localhost/script.js"></script>
+</div>
   <article>
     <?php
     if (empty($_GET['id'])==false){
