@@ -19,7 +19,6 @@
           <?php
             while($row = mysqli_fetch_assoc($result) ){ //출력 (연관배열의 형식), row는 조회돈 데이터의 첫번째 row의 데이터만 가져온다
               echo '<li><a href="http://localhost/html/index.php?id='.$row['id'].'">'.$row['title'].'</a></li>'."\n";
-              
             }
           ?>
         </ol>
@@ -31,15 +30,19 @@
   <script src = "http://localhost/script.js"></script>
   </div>
   <article>
-    <?php
-    if(empty($_GET['id'])=== false){
-      $sql='SELECT * FROM topic WHERE id='.$_GET['id'];
-      $result = mysqli_query($conn, $sql); //조회
-      $row = mysqli_fetch_assoc($result);
-      echo '<h2>'.$row['title'].'</h2>';
-      echo $row['description'];
-      }
-    ?>
+      <form action="process.php" method="post">
+        <p>
+          제목 : <input type="text" name="title">
+        </p>
+        <p> 
+          작성자 : <input type="text" name= "author">
+        </p>
+        <p>
+          본문 : <textarea name="description"></textarea>
+        </p>  
+        <input type="submit" name="name">
+
+      </form>
   </article>
 </body>
 </html>
