@@ -1,6 +1,8 @@
 <?php
-  $conn = mysqli_connect('localhost','root','0000');    //서버접속 : mysql -hlocalhost -uroot -p0000;
-  mysqli_select_db($conn, 'opentutorials');           //DB선택 : mysql> use opentutorials;
+  require("lib/db.php");   //서버접속 : mysql -hlocalhost -uroot -p0000;
+                           //DB선택 : mysql> use opentutorials;
+  require("config/config.php");
+  $conn= db_init($config["host"], $config["duser"], $config["dpw"], $config["dname"]);  
   $result = mysqli_query($conn, "SELECT *FROM topic");  //조회 : mysql>SELECT * FROM topic
 
 ?>  
@@ -18,7 +20,7 @@
         <ol>
           <?php
             while($row = mysqli_fetch_assoc($result) ){ //출력 (연관배열의 형식), row는 조회돈 데이터의 첫번째 row의 데이터만 가져온다
-              echo '<li><a href="http://localhost/html/index.php?id='.$row['id'].'">'.$row['title'].'</a></li>'."\n";
+              echo '<li><a href="http://localhost/html/index.php?id='.$row['id'].'">'.htmlspecialchars($row['title']).'</a></li>'."\n";
             }
           ?>
         </ol>
