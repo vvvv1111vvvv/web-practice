@@ -7,6 +7,12 @@ body.white {
   color:black;
 }
 
+.container{
+  padding-top:20px;
+}
+#control {
+  margin-bottom: 50px;
+}
 
 /*
 header{
@@ -27,8 +33,5 @@ article{
   float:left;
   padding:20px;
   width:500px;
-}
-#control {
-  float:right;
 }
 */
