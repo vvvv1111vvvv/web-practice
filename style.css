@@ -1,4 +1,4 @@
-body.black {
+body.black { /*body target의 class값이 black*/
   background-color:black;
   color:white;
 }

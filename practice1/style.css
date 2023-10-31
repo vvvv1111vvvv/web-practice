@@ -1,0 +1,33 @@
+body {
+    margin: 0px;
+}
+
+body.black {
+    /*body target의 class값이 black*/
+    background-color: black;
+    color: white;
+}
+
+header {
+    border-bottom: 1px solid grey;
+    padding-left: 30px;
+}
+
+nav {
+    border-right: 1px solid grey;
+    width: 200px;
+    height: 800px;
+    float: left;
+}
+
+nav ol {
+    margin: 0px;
+    padding: 20px;
+    list-style: none;
+}
+
+#content {
+    padding-left: 20px;
+    float: left;
+    width: 400px;
+}
