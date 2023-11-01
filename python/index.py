@@ -8,7 +8,7 @@ sanitizer=html_sanitizer.Sanitizer()
 
 import view
 
-form = cgi.FieldStorage(s)
+form = cgi.FieldStorage()
 if "id" in form:
     title=pageId = form["id"].value
     description = open("data/" + pageId, "r").read()
