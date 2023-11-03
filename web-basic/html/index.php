@@ -13,21 +13,21 @@ $result = mysqli_query($conn, "SELECT *FROM topic"); //조회 : mysql>SELECT * F
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
-  <link rel="stylesheet" type="text/css" href="/style.css">
-  <link href="/bootstrap-3.3.4-dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" type="text/css" href="/web-basic/style.css">
+  <link href="/web-basic/bootstrap-3.3.4-dist/css/bootstrap.min.css" rel="stylesheet">
 </head>
 
 <body id="target">
   <div class="container">
     <header class="jumbotron text-center">
-      <h1><a href="/html/index.php">JavaScript</a></h1>
+      <h1><a href="/web-basic/html/index.php">JavaScript</a></h1>
     </header>
     <div class="row">
       <nav class="col-md-3">
         <ol class="nav nav-pills nav-stacked">
           <?php
           while ($row = mysqli_fetch_assoc($result)) { //출력 (연관배열의 형식), row는 조회돈 데이터의 첫번째 row의 데이터만 가져온다
-            echo '<li><a href="/html/index.php?id=' . $row['id'] . '">' . htmlspecialchars($row['title']) . '</a></li>' . "\n";
+            echo '<li><a href="/web-basic/html/index.php?id=' . $row['id'] . '">' . htmlspecialchars($row['title']) . '</a></li>' . "\n";
             //htmlspecialchars : 문자열에서 특정한 특수문자를 HTML 엔티티로 변환한다. ex) <scirpt> -> &lt;script&gt;
             //php.net script tags
           }
@@ -54,15 +54,15 @@ $result = mysqli_query($conn, "SELECT *FROM topic"); //조회 : mysql>SELECT * F
             <input type="button" value="white" id="white_btn" class="btn btn-default" />
             <input type="button" value="black" id="black_btn" class="btn btn-default" />
           </div>
-          <a href="/html/write.php" class="btn btn-success btn-lg">쓰기</a>
-          <script src="/script.js"></script>
+          <a href="/web-basic/html/write.php" class="btn btn-success btn-lg">쓰기</a>
+          <script src="/web-basic/script.js"></script>
         </div>
       </div>
     </div>
     <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
     <!-- Include all compiled plugins (below), or include individual files as needed -->
-    <script src="/bootstrap-3.3.4-dist/js/bootstrap.min.js"></script>
+    <script src="/web-basic/bootstrap-3.3.4-dist/js/bootstrap.min.js"></script>
   </div>
 </body>
 

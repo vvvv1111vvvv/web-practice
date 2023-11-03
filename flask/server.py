@@ -121,6 +121,7 @@ def delete(id):
             break
     url='/'
     return redirect(url)
-app.run(debug=True)
-# app.run(port=5000) 기본포트
-# app.run() 실제서비스 시에는 디버그 지워야한다.
+#app.run(debug=True)
+if __name__ == '__main__':
+    app.run(host='0.0.0.0', port=5000)
+# app.run(debug=true) 실제서비스 시에는 디버그 지워야한다.

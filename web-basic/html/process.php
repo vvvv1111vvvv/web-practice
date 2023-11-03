@@ -20,5 +20,5 @@
 
     $sql="INSERT INTO topic(title, description, author, created) VALUES('".$_POST['title']."','". $_POST['description']."','".$user_id."', now())";
     $result = mysqli_query($conn, $sql);  //조회 : mysql>SELECT * FROM topic
-    header('Location: http://localhost/html/index.php'); //redirection
+    header('Location: http://localhost/web-basic/html/index.php'); //redirection
 ?>
